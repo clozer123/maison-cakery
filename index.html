@@ -597,67 +597,25 @@
         <p class="modal-subtitle">Maison Cakery – Nhận làm bánh tươi theo yêu cầu & giao tận nơi</p>
       </div>
 
-      <form class="modal-form" id="orderForm" onsubmit="handleOrderSubmit(event)">
-        
-        <div class="form-group">
-          <label for="cakeType" class="form-label">Chọn Loại Bánh / Món:</label>
-          <select id="cakeType" class="form-control" required>
-            <option value="Bánh Cưới Dát Vàng Hoàng Gia">Bánh Cưới Dát Vàng Hoàng Gia</option>
-            <option value="Bánh Kem Hoàng Gia">Bánh Kem Berry Dát Vàng Hoàng Gia (580.000₫)</option>
-            <option value="Bánh Cuộn Dâu Tây">Bánh Cuộn Dâu Tây Kem Tươi (260.000₫)</option>
-            <option value="Croissant Bơ Pháp">Croissant Bơ Pháp Truyền Thống (65.000₫)</option>
-            <option value="Tiramisu">Tiramisu Cà Phê Mascarpone (125.000₫)</option>
-            <option value="Opera Cake">Opera Cake Dát Vàng (145.000₫)</option>
-            <option value="Bánh Sinh Nhật Thiết Kế Riêng">Bánh Sinh Nhật Thiết Kế Riêng</option>
-          </select>
-        </div>
+      <div class="modal-form">
+    <div class="form-group col-6">
+        <label for="custPhone" class="form-label">Số Điện Thoại:</label>
+        <input type="tel" id="custPhone" class="form-control" placeholder="Ví dụ: 0912 345 678">
+    </div>
 
-        <div class="form-row">
-          <div class="form-group col-6">
-            <label for="cakeSize" class="form-label">Kích Thước / Số Lượng:</label>
-            <select id="cakeSize" class="form-control">
-              <option value="16cm (4-6 người)">16cm (4-6 người)</option>
-              <option value="18cm (6-8 người)">18cm (6-8 người)</option>
-              <option value="22cm (10-12 người)">22cm (10-12 người)</option>
-              <option value="2-3 Tầng (Tiệc sự kiện)">2-3 Tầng (Tiệc sự kiện)</option>
-              <option value="1 Phần (Pastry/Cuộn)">1 Phần</option>
-              <option value="Hộp Set 4 Món">Hộp Set 4 Món</option>
-            </select>
-          </div>
+    <div class="form-group">
+        <label for="cakeNote" class="form-label">Ghi Chữ Lên Bánh / Yêu Cầu Đặc Biệt:</label>
+        <textarea id="cakeNote" rows="2" class="form-control" placeholder="Ví dụ: Happy Birthday..."></textarea>
+    </div>
 
-          <div class="form-group col-6">
-            <label for="orderDate" class="form-label">Ngày Nhận Bánh:</label>
-            <input type="date" id="orderDate" class="form-control" required>
-          </div>
-        </div>
+    <a href="https://www.facebook.com/share/19d8vX5jXe/?mibextid=wwXIfr" target="_blank" class="btn-submit-order" style="text-align: center; display: block; text-decoration: none;">
+        <span>Xác Nhận Đặt Bánh Qua Facebook</span>
+    </a>
 
-        <div class="form-row">
-          <div class="form-group col-6">
-            <label for="custName" class="form-label">Họ & Tên:</label>
-            <input type="text" id="custName" class="form-control" placeholder="Ví dụ: Hoàng Anh" required>
-          </div>
-
-          <div class="form-group col-6">
-            <label for="custPhone" class="form-label">Số Điện Thoại:</label>
-            <input type="tel" id="custPhone" class="form-control" placeholder="Ví dụ: 0912 345 678" required>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label for="cakeNote" class="form-label">Ghi Chữ Lên Bánh / Yêu Cầu Đặc Biệt:</label>
-          <textarea id="cakeNote" rows="2" class="form-control" placeholder="Ví dụ: Happy Birthday Minh Thư 25th, nến số 25..."></textarea>
-        </div>
-
-        <div class="modal-actions">
-          <button type="submit" class="btn-submit-order">
-            <span>Xác Nhận Đặt Bánh</span>
-          </button>
-          
-          <div class="order-hotline-note">
-            Hoặc gọi nhanh: <a href="tel:0783206270" class="hotline-link">0783 206 270</a> (Hỗ trợ 24/7)
-          </div>
-        </div>
-
+    <div class="order-hotline-note">
+        Hoặc gọi nhanh: <a href="tel:0783206270" class="hotline-link">0783 206 270</a> (Hỗ trợ 24/7)
+    </div>
+</div>
       </form>
     </div>
   </div>
