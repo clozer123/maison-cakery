@@ -1,0 +1,42 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+  <defs>
+    <linearGradient id="goldShimmer" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C5A059" stop-opacity="0.18"/>
+      <stop offset="50%" stop-color="#E5C784" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#966B27" stop-opacity="0.12"/>
+    </linearGradient>
+    <radialGradient id="goldDust" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#E5C784" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#C5A059" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Organic gold leaves -->
+  <g fill="url(#goldShimmer)" stroke="none">
+    <!-- Leaf 1 -->
+    <path d="M70,120 C90,80 140,75 160,110 C140,125 100,140 70,120 Z"/>
+    <path d="M70,120 C100,105 130,100 160,110" stroke="#C5A059" stroke-width="0.75" stroke-opacity="0.25" fill="none"/>
+    <!-- Leaf 2 -->
+    <path d="M480,240 C510,210 560,220 570,260 C540,270 500,270 480,240 Z"/>
+    <path d="M480,240 C520,235 550,245 570,260" stroke="#C5A059" stroke-width="0.75" stroke-opacity="0.25" fill="none"/>
+    <!-- Small Leaf 3 -->
+    <path d="M220,450 C235,420 270,425 280,450 C265,465 240,465 220,450 Z"/>
+    <!-- Small Leaf 4 -->
+    <path d="M380,80 C395,55 425,60 435,80 C420,95 400,95 380,80 Z"/>
+    <!-- Organic gold foil speckles / flakes -->
+    <polygon points="110,310 115,315 113,322 107,318" opacity="0.4"/>
+    <polygon points="410,390 417,392 414,400 408,397" opacity="0.35"/>
+    <polygon points="290,180 295,183 293,188 288,185" opacity="0.4"/>
+    <polygon points="520,130 526,132 523,139 517,136" opacity="0.45"/>
+    <polygon points="180,520 186,523 183,530 178,527" opacity="0.35"/>
+    <polygon points="340,540 345,542 343,548 338,545" opacity="0.3"/>
+  </g>
+
+  <!-- Shimmering dust points -->
+  <circle cx="95" cy="210" r="2.5" fill="url(#goldDust)"/>
+  <circle cx="260" cy="90" r="2" fill="url(#goldDust)"/>
+  <circle cx="490" cy="460" r="3" fill="url(#goldDust)"/>
+  <circle cx="150" cy="410" r="2" fill="url(#goldDust)"/>
+  <circle cx="360" cy="270" r="2.5" fill="url(#goldDust)"/>
+  <circle cx="530" cy="340" r="1.5" fill="url(#goldDust)"/>
+</svg>

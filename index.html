@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maison Cakery - Tinh Hoa Bánh Ngọt Pháp & Nghệ Thuật Ẩm Thực</title>
+  <meta name="description" content="Maison Cakery - Tiệm bánh ngọt Pháp thủ công cao cấp. Bánh cưới dát vàng, bánh kem nghệ thuật, bánh cuộn và pastry chuẩn vị Paris. Hotline: 0783 206 270.">
+  <meta name="keywords" content="Maison Cakery, Bánh ngọt Pháp, Bánh kem dát vàng, Bánh cưới cao cấp, French Pastry, Croissant, Tiramisu, Opera Cake">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="Maison Cakery - Tinh Hoa Bánh Ngọt Pháp">
+  <meta property="og:description" content="Khám phá thế giới bánh ngọt đẳng cấp, được làm thủ công với sự tinh tế và tình yêu.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/hero_cake.jpg">
+
+  <!-- Google Fonts: Playfair Display, Alex Brush, Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header" id="header">
+    <div class="container header-container">
+      
+      <!-- Upper Left Logo -->
+      <a href="#hero" class="brand-logo" aria-label="Maison Cakery Trang Chủ">
+        <img src="assets/logo.svg" alt="Maison Cakery Logo" class="logo-image" width="160" height="120">
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" id="navMenu" aria-label="Menu chính">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#hero" class="nav-link active">Trang Chủ</a></li>
+          <li class="nav-item"><a href="#menu" class="nav-link">Thực Đơn</a></li>
+          <li class="nav-item"><a href="#story" class="nav-link">Về Chúng Tôi</a></li>
+          <li class="nav-item"><a href="#order" class="nav-link" onclick="openOrderModal(); return false;">Đặt Hàng</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Liên Hệ</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <a href="tel:0783206270" class="btn-hotline" title="Gọi hotline đặt bánh">
+          <svg class="phone-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+          </svg>
+          <span class="hotline-text">0783 206 270</span>
+        </a>
+        <a href="#order" class="btn-nav-order" onclick="openOrderModal(); return false;">Liên Hệ</a>
+
+        <!-- Mobile Toggle Button -->
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Mở bảng điều hướng" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container">
+        
+        <!-- Hero Media: Multi-tiered wedding cake with gold leaf + French pastries -->
+        <div class="hero-media-wrapper">
+          <div class="hero-image-frame">
+            <img src="assets/hero_cake.jpg" alt="Bánh cưới nhiều tầng dát lá vàng và bánh pastry Pháp Maison Cakery" class="hero-image" loading="eager">
+            <div class="gold-shimmer-badge">
+              <span class="badge-icon">✦</span>
+              <span>Edible 24K Gold Leaf</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Content: Large Elegant Headline & Gold CTA -->
+        <div class="hero-content">
+          <div class="hero-tagline">
+            <span class="tagline-leaf">❦</span>
+            <span class="tagline-text">Nghệ Thuật Bánh Ngọt Paris</span>
+          </div>
+
+          <h1 class="hero-title">
+            Maison Cakery – <br>
+            <span class="gold-gradient-text">Tinh Hoa Bánh Ngọt Pháp</span>
+          </h1>
+
+          <p class="hero-description">
+            Khám phá thế giới bánh ngọt đẳng cấp, được làm thủ công với sự tinh tế và tình yêu. Mỗi chiếc bánh là một tác phẩm nghệ thuật đong đầy xúc cảm, nâng niu từng khoảnh khắc ngọt ngào của bạn.
+          </p>
+
+          <div class="hero-cta-group">
+            <button class="btn-cta-gold" onclick="openOrderModal('Bánh Cưới Dát Vàng Hoàng Gia')">
+              <span class="cta-text">Đặt Hàng Ngay</span>
+              <svg class="arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+            <a href="#menu" class="btn-secondary-link">
+              <span>Xem Thực Đơn</span>
+            </a>
+          </div>
+
+          <!-- Trust Highlights -->
+          <div class="hero-highlights">
+            <div class="highlight-item">
+              <span class="highlight-num">100%</span>
+              <span class="highlight-label">Bơ & Kem Sữa Pháp</span>
+            </div>
+            <div class="highlight-divider"></div>
+            <div class="highlight-item">
+              <span class="highlight-num">Fresh</span>
+              <span class="highlight-label">Nướng Mới Mỗi Ngày</span>
+            </div>
+            <div class="highlight-divider"></div>
+            <div class="highlight-item">
+              <span class="highlight-num">Artisan</span>
+              <span class="highlight-label">Thiết Kế Độc Bản</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= PRODUCT CATEGORIES SECTION ================= -->
+    <section class="section-categories" id="menu">
+      <div class="container">
+        
+        <div class="section-heading text-center">
+          <span class="section-ornament">❧ ✦ ❧</span>
+          <h2 class="section-title">Danh Mục Bánh Thủ Công</h2>
+          <p class="section-subtitle">
+            Bộ sưu tập hương vị tinh tế được nhào nặn từ nguồn nguyên liệu nhập khẩu danh giá
+          </p>
+        </div>
+
+        <!-- Preview cards for different product categories (Bánh Kem, Bánh Cuộn, Pastry) -->
+        <div class="categories-grid">
+          
+          <!-- Category 1: Bánh Kem -->
+          <div class="category-card" data-category="banh-kem" onclick="filterCategory('banh-kem')">
+            <div class="cat-image-box">
+              <img src="assets/cat_banh_kem.jpg" alt="Danh mục Bánh Kem Maison Cakery" class="cat-img" loading="lazy">
+              <span class="cat-badge">Signature</span>
+            </div>
+            <div class="cat-info">
+              <h3 class="cat-name">Bánh Kem</h3>
+              <p class="cat-desc">
+                Bánh kem sinh nhật, bánh tiệc cưới nhiều tầng phủ kem bơ tươi, hoa quả tuyển chọn và dát vàng 24K sang trọng.
+              </p>
+              <div class="cat-footer">
+                <span class="cat-count">12+ Mẫu thiết kế</span>
+                <span class="cat-explore-btn">Khám Phá →</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 2: Bánh Cuộn -->
+          <div class="category-card" data-category="banh-cuon" onclick="filterCategory('banh-cuon')">
+            <div class="cat-image-box">
+              <img src="assets/cat_banh_cuon.jpg" alt="Danh mục Bánh Cuộn Maison Cakery" class="cat-img" loading="lazy">
+              <span class="cat-badge">Artisan</span>
+            </div>
+            <div class="cat-info">
+              <h3 class="cat-name">Bánh Cuộn</h3>
+              <p class="cat-desc">
+                Swiss roll mềm mịn tựa mây, cuộn tròn cùng kem tươi thanh nhẹ, dâu tây Đà Lạt tươi mọng và matcha thượng hạng.
+              </p>
+              <div class="cat-footer">
+                <span class="cat-count">8+ Hương vị</span>
+                <span class="cat-explore-btn">Khám Phá →</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 3: Pastry -->
+          <div class="category-card" data-category="pastry" onclick="filterCategory('pastry')">
+            <div class="cat-image-box">
+              <img src="assets/cat_pastry.jpg" alt="Danh mục Pastry Pháp Maison Cakery" class="cat-img" loading="lazy">
+              <span class="cat-badge">Classic Paris</span>
+            </div>
+            <div class="cat-info">
+              <h3 class="cat-name">Pastry</h3>
+              <p class="cat-desc">
+                Tinh hoa bánh nướng truyền thống Pháp: Croissant ngàn lớp giòn rụm, bánh Opera chocolate nồng nàn và Tiramisu êm dịu.
+              </p>
+              <div class="cat-footer">
+                <span class="cat-count">15+ Món đặc sắc</span>
+                <span class="cat-explore-btn">Khám Phá →</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= FEATURED PRODUCTS (Những Món Ăn Nổi Bật) ================= -->
+    <section class="section-featured" id="featured">
+      <div class="container">
+        
+        <div class="section-heading text-center">
+          <span class="section-ornament">✦</span>
+          <h2 class="section-title">Những Món Ăn Nổi Bật</h2>
+          <p class="section-subtitle">
+            Những sáng tạo ẩm thực được quý khách hàng yêu thích và lựa chọn nhiều nhất
+          </p>
+
+          <!-- Filter Tabs -->
+          <div class="menu-tabs" role="tablist">
+            <button class="tab-btn active" data-filter="all" onclick="filterCategory('all')">Tất Cả</button>
+            <button class="tab-btn" data-filter="pastry" onclick="filterCategory('pastry')">Pastry</button>
+            <button class="tab-btn" data-filter="banh-kem" onclick="filterCategory('banh-kem')">Bánh Kem</button>
+            <button class="tab-btn" data-filter="banh-cuon" onclick="filterCategory('banh-cuon')">Bánh Cuộn</button>
+          </div>
+        </div>
+
+        <div class="products-grid" id="productsGrid">
+          
+          <!-- Item 1: Croissant -->
+          <div class="product-item" data-category="pastry">
+            <div class="product-thumb">
+              <img src="assets/item_croissant.jpg" alt="Bánh sừng bò Croissant bơ Pháp giòn rụm" class="product-img" loading="lazy">
+              <div class="product-overlay">
+                <button class="btn-quick-order" onclick="openOrderModal('Croissant Bơ Pháp')">Đặt Bánh Này</button>
+              </div>
+            </div>
+            <div class="product-details">
+              <div class="product-tags">
+                <span class="tag-gold">Bán Chạy</span>
+                <span class="tag-origin">Bơ Isigny Pháp</span>
+              </div>
+              <h3 class="product-title">Croissant</h3>
+              <p class="product-desc">Bánh sừng bò ngàn lớp chuẩn vị Pháp, thơm lừng bơ tinh khiết và giòn tan từng lớp vỏ.</p>
+              <div class="product-price-row">
+                <span class="product-price">65.000₫</span>
+                <button class="btn-add-cart" onclick="openOrderModal('Croissant Bơ Pháp')" aria-label="Đặt Croissant">+</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2: Tiramisu -->
+          <div class="product-item" data-category="pastry">
+            <div class="product-thumb">
+              <img src="assets/item_tiramisu.jpg" alt="Tiramisu cà phê Ý cao cấp" class="product-img" loading="lazy">
+              <div class="product-overlay">
+                <button class="btn-quick-order" onclick="openOrderModal('Tiramisu Mascarpone')">Đặt Bánh Này</button>
+              </div>
+            </div>
+            <div class="product-details">
+              <div class="product-tags">
+                <span class="tag-gold">Yêu Thích</span>
+                <span class="tag-origin">Phô Mai Mascarpone</span>
+              </div>
+              <h3 class="product-title">Tiramisu</h3>
+              <p class="product-desc">Sự hòa quyện tuyệt hảo giữa cà phê espresso thơm đậm, rượu Kahlúa và phô mai béo ngậy.</p>
+              <div class="product-price-row">
+                <span class="product-price">125.000₫</span>
+                <button class="btn-add-cart" onclick="openOrderModal('Tiramisu')" aria-label="Đặt Tiramisu">+</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3: Opera Cake -->
+          <div class="product-item" data-category="pastry">
+            <div class="product-thumb">
+              <img src="assets/item_opera.jpg" alt="Bánh Opera socola và cà phê dát vàng" class="product-img" loading="lazy">
+              <div class="product-overlay">
+                <button class="btn-quick-order" onclick="openOrderModal('Opera Cake Dát Vàng')">Đặt Bánh Này</button>
+              </div>
+            </div>
+            <div class="product-details">
+              <div class="product-tags">
+                <span class="tag-gold">Dát Vàng 24K</span>
+                <span class="tag-origin">Chocolate Valrhona</span>
+              </div>
+              <h3 class="product-title">Opera Cake</h3>
+              <p class="product-desc">Kiệt tác 6 lớp bánh Joconde hạnh nhân, ganache socola đen Bỉ và kem bơ cà phê mịn màng.</p>
+              <div class="product-price-row">
+                <span class="product-price">145.000₫</span>
+                <button class="btn-add-cart" onclick="openOrderModal('Opera Cake')" aria-label="Đặt Opera Cake">+</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4: Bánh Kem Hoàng Gia -->
+          <div class="product-item" data-category="banh-kem">
+            <div class="product-thumb">
+              <img src="assets/cat_banh_kem.jpg" alt="Bánh Kem Sinh Nhật Trái Cây Dát Vàng" class="product-img" loading="lazy">
+              <div class="product-overlay">
+                <button class="btn-quick-order" onclick="openOrderModal('Bánh Kem Hoàng Gia')">Đặt Bánh Này</button>
+              </div>
+            </div>
+            <div class="product-details">
+              <div class="product-tags">
+                <span class="tag-gold">Signature</span>
+                <span class="tag-origin">Trái Cây & Vàng Lá</span>
+              </div>
+              <h3 class="product-title">Bánh Kem Hoàng Gia</h3>
+              <p class="product-desc">Cốt bánh chiffon vani nguyên quả Madagascar, phủ kem bơ tươi mượt và quả mọng nhập khẩu.</p>
+              <div class="product-price-row">
+                <span class="product-price">580.000₫</span>
+                <button class="btn-add-cart" onclick="openOrderModal('Bánh Kem Hoàng Gia')" aria-label="Đặt Bánh Kem">+</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 5: Bánh Cuộn Dâu Tây -->
+          <div class="product-item" data-category="banh-cuon">
+            <div class="product-thumb">
+              <img src="assets/cat_banh_cuon.jpg" alt="Bánh cuộn dâu tây kem tươi" class="product-img" loading="lazy">
+              <div class="product-overlay">
+                <button class="btn-quick-order" onclick="openOrderModal('Bánh Cuộn Dâu Tây')">Đặt Bánh Này</button>
+              </div>
+            </div>
+            <div class="product-details">
+              <div class="product-tags">
+                <span class="tag-gold">Mềm Mịn</span>
+                <span class="tag-origin">Dâu Tươi Đà Lạt</span>
+              </div>
+              <h3 class="product-title">Bánh Cuộn Dâu Tây</h3>
+              <p class="product-desc">Bông lan xốp ẩm thơm ngát hương trứng sữa, cuộn tròn dâu tây tươi và kem whipping thanh nhẹ.</p>
+              <div class="product-price-row">
+                <span class="product-price">260.000₫</span>
+                <button class="btn-add-cart" onclick="openOrderModal('Bánh Cuộn Dâu Tây')" aria-label="Đặt Bánh Cuộn">+</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 6: Bánh Cưới Dát Vàng -->
+          <div class="product-item" data-category="banh-kem">
+            <div class="product-thumb">
+              <img src="assets/gallery_1.jpg" alt="Bánh cưới 4 tầng dát vàng hoa tươi" class="product-img" loading="lazy">
+              <div class="product-overlay">
+                <button class="btn-quick-order" onclick="openOrderModal('Bánh Cưới Dát Vàng')">Đặt Bánh Này</button>
+              </div>
+            </div>
+            <div class="product-details">
+              <div class="product-tags">
+                <span class="tag-gold">Haute Couture</span>
+                <span class="tag-origin">Thiết Kế Riêng</span>
+              </div>
+              <h3 class="product-title">Bánh Cưới Dát Vàng</h3>
+              <p class="product-desc">Kiệt tác bánh cưới nhiều tầng đính hoa tươi pastel, dát vàng lá 24K cho ngày trọng đại hoàn mỹ.</p>
+              <div class="product-price-row">
+                <span class="product-price">Liên hệ tư vấn</span>
+                <button class="btn-add-cart" onclick="openOrderModal('Bánh Cưới Dát Vàng')" aria-label="Đặt Bánh Cưới">+</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= STORY SECTION (Câu Chuyện Của Chúng Tôi) ================= -->
+    <section class="section-story" id="story">
+      <div class="container story-container">
+        
+        <!-- Story Image: Artisanal cake with powdered sugar, coffee & croissants -->
+        <div class="story-media">
+          <div class="story-image-box">
+            <img src="assets/story_cake.jpg" alt="Nghệ nhân Maison Cakery làm bánh thủ công tại xưởng" class="story-img" loading="lazy">
+            <div class="story-quote-tag">
+              <span class="quote-symbol">“</span>
+              <span>Làm bánh là một bản giao hưởng giữa nguyên liệu hảo hạng và tình yêu thuần khiết.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Story Text -->
+        <div class="story-content">
+          <span class="story-subheading">Hành Trình Nghệ Nhân</span>
+          <h2 class="story-heading">Câu Chuyện Của Chúng Tôi</h2>
+          
+          <div class="story-text">
+            <p>
+              Tại <strong>Maison Cakery</strong>, chúng tôi tin rằng mỗi chiếc bánh không chỉ đơn thuần là món tráng miệng ngọt ngào, mà là một tác phẩm nghệ thuật chứa đựng linh hồn của ẩm thực Pháp cổ điển.
+            </p>
+            <p>
+              Bắt nguồn từ niềm đam mê sâu sắc với kỹ nghệ làm bánh chuẩn mực Paris, các nghệ nhân bánh lành nghề của chúng tôi tỉ mỉ chọn lựa từng hạt vani Bourbon Madagascar, dòng bơ kem danh tiếng từ vùng Normandie và sô-cô-la nguyên chất từ vương quốc Bỉ. Mỗi mẻ bánh đều được ủ bột đúng nhiệt độ và nướng mới mỗi sáng tinh mơ.
+            </p>
+            <p>
+              Từ những chiếc bánh sừng bò giòn rụm ngát hương bơ tươi, đến các mẫu bánh cưới dát vàng lộng lẫy trong ngày hạnh phúc nhất đời người – Maison Cakery luôn vinh hạnh được đồng hành và ghi dấu ấn ngọt ngào trong mọi khoảnh khắc của bạn.
+            </p>
+          </div>
+
+          <div class="story-signature">
+            <button class="btn-cta-gold" onclick="openOrderModal('Tư Vấn Bánh Thủ Công')">
+              <span class="cta-text">Đặt Hàng Ngay</span>
+              <svg class="arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+            <div class="chef-info">
+              <span class="chef-title">Chef Pâtissier</span>
+              <span class="chef-name">Maison Cakery Atelier</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= GALLERY SECTION (Thư Viện Ảnh) ================= -->
+    <section class="section-gallery" id="gallery">
+      <div class="container">
+        
+        <div class="section-heading text-center">
+          <span class="section-ornament">❦ ✦ ❦</span>
+          <h2 class="section-title">Thư Viện Ảnh</h2>
+          <p class="section-subtitle">
+            Bộ sưu tập những kiệt tác bánh cưới và bánh sự kiện dát vàng được chế tác độc bản
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+          
+          <!-- Gallery Image 1 -->
+          <div class="gallery-item" onclick="openLightbox('assets/gallery_1.jpg', 'Bánh cưới hoàng gia dát lá vàng 24K và hoa mẫu đơn blush pink')">
+            <div class="gallery-thumb">
+              <img src="assets/gallery_1.jpg" alt="Bánh cưới hoàng gia dát lá vàng 24K" class="gallery-img" loading="lazy">
+              <div class="gallery-hover-overlay">
+                <span class="gallery-zoom-icon">🔍</span>
+                <span class="gallery-label">Bánh Cưới Hoàng Gia Dát Vàng</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gallery Image 2 -->
+          <div class="gallery-item" onclick="openLightbox('assets/gallery_2.jpg', 'Bánh cưới tháp hoa tươi sang trọng tại sảnh tiệc')">
+            <div class="gallery-thumb">
+              <img src="assets/gallery_2.jpg" alt="Bánh cưới tháp hoa tươi sang trọng" class="gallery-img" loading="lazy">
+              <div class="gallery-hover-overlay">
+                <span class="gallery-zoom-icon">🔍</span>
+                <span class="gallery-label">Bánh Tiệc Cưới Tối Giản</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gallery Image 3 -->
+          <div class="gallery-item" onclick="openLightbox('assets/gallery_3.jpg', 'Bánh kem sinh nhật nghệ thuật quả mọng tươi và vàng lá')">
+            <div class="gallery-thumb">
+              <img src="assets/gallery_3.jpg" alt="Bánh kem sinh nhật nghệ thuật quả mọng tươi" class="gallery-img" loading="lazy">
+              <div class="gallery-hover-overlay">
+                <span class="gallery-zoom-icon">🔍</span>
+                <span class="gallery-label">Bánh Kỷ Niệm Nghệ Thuật</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= COMMITMENTS / LUXURY VALUES ================= -->
+    <section class="section-values">
+      <div class="container">
+        <div class="values-grid">
+          
+          <div class="value-box">
+            <div class="value-icon">✦</div>
+            <h3 class="value-title">Nguyên Liệu Hảo Hạng</h3>
+            <p class="value-desc">100% bơ sữa Pháp, socola Bỉ và hoa quả tươi hữu cơ chuẩn vị tự nhiên không phụ gia.</p>
+          </div>
+
+          <div class="value-box">
+            <div class="value-icon">⚜</div>
+            <h3 class="value-title">Lá Vàng Thực Phẩm 24K</h3>
+            <p class="value-desc">Vàng lá thực phẩm chứng nhận an toàn châu Âu, đem lại vẻ đẹp quyền quý vượt thời gian.</p>
+          </div>
+
+          <div class="value-box">
+            <div class="value-icon">❦</div>
+            <h3 class="value-title">Thiết Kế Riêng Biệt</h3>
+            <p class="value-desc">Tư vấn và phác thảo mẫu bánh độc bản theo phong cách và câu chuyện tình yêu của bạn.</p>
+          </div>
+
+          <div class="value-box">
+            <div class="value-icon">🚗</div>
+            <h3 class="value-title">Giao Bánh Chuyên Nghiệp</h3>
+            <p class="value-desc">Đóng gói hộp cao cấp, xe giao bánh chuyên dụng giữ lạnh đảm bảo hình dáng vẹn toàn.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer" id="contact">
+    <div class="container footer-container">
+      
+      <!-- Footer Column 1: Logo & Brand -->
+      <div class="footer-col footer-brand-col">
+        <a href="#hero" class="footer-logo" aria-label="Maison Cakery">
+          <img src="assets/logo.svg" alt="Maison Cakery Logo Footer" class="footer-logo-img" width="140" height="105">
+        </a>
+        <p class="footer-brand-desc">
+          Maison Cakery – Tiệm bánh ngọt thủ công phong cách Pháp cao cấp, gửi trao tinh hoa và niềm hạnh phúc trọn vẹn trong từng vị bánh.
+        </p>
+      </div>
+
+      <!-- Footer Column 2: Liên Hệ -->
+      <div class="footer-col">
+        <h4 class="footer-title">Liên Hệ</h4>
+        <ul class="footer-info-list">
+          <li class="footer-info-item">
+            <svg class="footer-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+              <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+            </svg>
+            <a href="tel:0783206270" class="footer-highlight-link">0783 206 270</a>
+          </li>
+          <li class="footer-info-item">
+            <svg class="footer-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+            </svg>
+            <a href="https://maisoncakery.com" target="_blank" rel="noopener">maisoncakery.com</a>
+          </li>
+          <li class="footer-info-item">
+            <svg class="footer-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>
+            <span>88 Pasteur, Bến Nghé, Quận 1, TP. Hồ Chí Minh</span>
+          </li>
+          <li class="footer-info-item">
+            <svg class="footer-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+              <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+            </svg>
+            <span>Mở cửa: 08:00 – 21:30 hàng ngày</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Footer Column 3: Điều Khoản Sử Dụng & Mạng Xã Hội -->
+      <div class="footer-col">
+        <h4 class="footer-title">Điều Khoản Sử Dụng</h4>
+        <ul class="footer-links-list">
+          <li><a href="#hero" class="footer-link">Chính sách đặt bánh & thanh toán</a></li>
+          <li><a href="#hero" class="footer-link">Hướng dẫn bảo quản bánh kem tươi</a></li>
+          <li><a href="#hero" class="footer-link">Quy chuẩn dịch vụ bánh cưới dát vàng</a></li>
+          <li><a href="#hero" class="footer-link">Bảo mật thông tin khách hàng</a></li>
+        </ul>
+
+        <div class="footer-social-wrap">
+          <a href="https://facebook.com" target="_blank" rel="noopener" class="social-item" title="Facebook Maison Cakery">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            <span>Maison Cakery</span>
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener" class="social-item" title="Instagram Maison Cakery">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            <span>Maison Cakery</span>
+          </a>
+          <a href="https://tiktok.com" target="_blank" rel="noopener" class="social-item" title="TikTok Maison Cakery">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.04-.1z"/></svg>
+            <span>Maison Cakery</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Copyright -->
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>© 2026 Maison Cakery. All rights reserved. Tinh hoa nghệ thuật bánh ngọt Pháp.</p>
+        <p class="developer-credit">Hotline đặt tiệc: <a href="tel:0783206270">0783 206 270</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= ONLINE ORDER MODAL (Đặt Hàng Ngay) ================= -->
+  <div class="modal-backdrop" id="orderModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      
+      <button class="modal-close" onclick="closeOrderModal()" aria-label="Đóng bảng đặt hàng">✕</button>
+
+      <div class="modal-header">
+        <div class="modal-icon-badge">🍰</div>
+        <h3 class="modal-title" id="modalTitle">Đặt Bánh Trực Tuyến</h3>
+        <p class="modal-subtitle">Maison Cakery – Nhận làm bánh tươi theo yêu cầu & giao tận nơi</p>
+      </div>
+
+      <form class="modal-form" id="orderForm" onsubmit="handleOrderSubmit(event)">
+        
+        <div class="form-group">
+          <label for="cakeType" class="form-label">Chọn Loại Bánh / Món:</label>
+          <select id="cakeType" class="form-control" required>
+            <option value="Bánh Cưới Dát Vàng Hoàng Gia">Bánh Cưới Dát Vàng Hoàng Gia</option>
+            <option value="Bánh Kem Hoàng Gia">Bánh Kem Berry Dát Vàng Hoàng Gia (580.000₫)</option>
+            <option value="Bánh Cuộn Dâu Tây">Bánh Cuộn Dâu Tây Kem Tươi (260.000₫)</option>
+            <option value="Croissant Bơ Pháp">Croissant Bơ Pháp Truyền Thống (65.000₫)</option>
+            <option value="Tiramisu">Tiramisu Cà Phê Mascarpone (125.000₫)</option>
+            <option value="Opera Cake">Opera Cake Dát Vàng (145.000₫)</option>
+            <option value="Bánh Sinh Nhật Thiết Kế Riêng">Bánh Sinh Nhật Thiết Kế Riêng</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-6">
+            <label for="cakeSize" class="form-label">Kích Thước / Số Lượng:</label>
+            <select id="cakeSize" class="form-control">
+              <option value="16cm (4-6 người)">16cm (4-6 người)</option>
+              <option value="18cm (6-8 người)">18cm (6-8 người)</option>
+              <option value="22cm (10-12 người)">22cm (10-12 người)</option>
+              <option value="2-3 Tầng (Tiệc sự kiện)">2-3 Tầng (Tiệc sự kiện)</option>
+              <option value="1 Phần (Pastry/Cuộn)">1 Phần</option>
+              <option value="Hộp Set 4 Món">Hộp Set 4 Món</option>
+            </select>
+          </div>
+
+          <div class="form-group col-6">
+            <label for="orderDate" class="form-label">Ngày Nhận Bánh:</label>
+            <input type="date" id="orderDate" class="form-control" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-6">
+            <label for="custName" class="form-label">Họ & Tên:</label>
+            <input type="text" id="custName" class="form-control" placeholder="Ví dụ: Hoàng Anh" required>
+          </div>
+
+          <div class="form-group col-6">
+            <label for="custPhone" class="form-label">Số Điện Thoại:</label>
+            <input type="tel" id="custPhone" class="form-control" placeholder="Ví dụ: 0912 345 678" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="cakeNote" class="form-label">Ghi Chữ Lên Bánh / Yêu Cầu Đặc Biệt:</label>
+          <textarea id="cakeNote" rows="2" class="form-control" placeholder="Ví dụ: Happy Birthday Minh Thư 25th, nến số 25..."></textarea>
+        </div>
+
+        <div class="modal-actions">
+          <button type="submit" class="btn-submit-order">
+            <span>Xác Nhận Đặt Bánh</span>
+          </button>
+          
+          <div class="order-hotline-note">
+            Hoặc gọi nhanh: <a href="tel:0783206270" class="hotline-link">0783 206 270</a> (Hỗ trợ 24/7)
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <!-- ================= LIGHTBOX MODAL (Xem Ảnh Phóng To) ================= -->
+  <div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox()">
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+      <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+      <img src="" alt="Phóng to ảnh Maison Cakery" id="lightboxImg" class="lightbox-img">
+      <p id="lightboxCaption" class="lightbox-caption"></p>
+    </div>
+  </div>
+
+  <!-- ================= TOAST NOTIFICATION ================= -->
+  <div class="toast-notification" id="toast"></div>
+
+  <!-- Javascript -->
+  <script src="script.js"></script>
+</body>
+</html>
